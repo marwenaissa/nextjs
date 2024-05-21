@@ -39,6 +39,15 @@ app.get('/films/:id', (req, res) => {
     res.json(film);
   });
 
-app.listen(3001, () => {
+app.get('/',(req, res) => {
+    console.log(req);
+    res.send(req.query.prenom);
+    });
+
+
+
+
+
+app.listen(3002, () => {
     console.log("Serveur démarré");
 });
